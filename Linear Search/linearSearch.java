@@ -161,5 +161,24 @@ public class Main {
         }
         return count;
     }
+    // Another Method to find even length of Digit numbers in the array
+    static int findNumbers2(int[] array) {
+        if(array.length==0) {
+            return -1;
+        }
+        int evenCount =0;
+        for(int num:array) {
+            int digits = 0;
+            while(num>0) {
+                digits++;
+                num = num/10;
+            }
+            if(digits%2==0) {
+                evenCount++;
+            }
+
+        }
+        return evenCount;
+    }
 
 }
